@@ -9,6 +9,7 @@ import TrendingScreen from './src/screens/TrendingScreen';
 import CategoriesScreen from './src/screens/CategoriesScreen';
 import ItemScreen from './src/screens/ItemScreen';
 import SignInScreen from './src/screens/SignInScreen';
+import SignUpScreen from './src/screens/SignUpScree';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
@@ -20,6 +21,7 @@ function App(): JSX.Element {
             headerShown: false,
           }}>
           <Stack.Screen name="SignIn" component={SignInScreen} />
+          <Stack.Screen name="SignUp" component={SignUpScreen} />
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Trending" component={TrendingScreen} />
           <Stack.Screen name="Categories" component={CategoriesScreen} />

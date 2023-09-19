@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
@@ -8,9 +8,8 @@ import {
   Input,
 } from 'native-base';
 
-const SignInScreen: FC = () => {
+const SignUpScreen: FC = () => {
   const navigation: any = useNavigation();
-  const [isHighlighted, setHighlighted] = useState<Boolean>(false);
 
   const signIn = () => {
     navigation.navigate('Home');
@@ -48,23 +47,11 @@ const SignInScreen: FC = () => {
             onPress={() => signIn()}
             style={styles.buttonStyle}>
             <Text style={styles.buttonText}>
-              Sign In
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPressIn={() => setHighlighted(true)}
-            onPressOut={() => setHighlighted(false)}
-          >
-            <Text style={{
-              textAlign: 'center',
-              backgroundColor: isHighlighted ? '#84a8B6' : 'transparent',
-              color: isHighlighted ? 'black' : 'white',
-            }}>
-              Create Account
+              Sign Up
             </Text>
           </TouchableOpacity>
         </View>
-			</SafeAreaView>
+        </SafeAreaView>
 		);
 };
 
@@ -108,4 +95,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default SignInScreen;
+export default SignUpScreen;
