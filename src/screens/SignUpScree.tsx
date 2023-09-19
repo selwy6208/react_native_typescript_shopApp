@@ -16,42 +16,55 @@ const SignUpScreen: FC = () => {
   };
     return (
 			<SafeAreaView style={styles.container}>
-        <View style={styles.container}>
-          <View style={styles.itemStyle}>
-            <Input
-              style={styles.input}
-              placeholder="Username"
-              placeholderTextColor="#adb4bc"
-              keyboardType={'email-address'}
-              returnKeyType="next"
-              autoCapitalize="none"
-              autoCorrect={false}
-              // onSubmitEditing={(event) => {event.refs.SecondInput._root.focus();}}
-              // onChangeText={(value: any) => onChangeText('username', value)}
-            />
-          </View>
-          <View style={styles.itemStyle}>
-            <Input
-              style={styles.input}
-              placeholder="Password"
-              placeholderTextColor="#adb4bc"
-              returnKeyType="go"
-              autoCapitalize="none"
-              autoCorrect={false}
-              secureTextEntry={true}
-              // ref="SecondInput"
-              // onChangeText={value => onChangeText('password', value)}
-            />
-          </View>
-          <TouchableOpacity
-            onPress={() => signIn()}
-            style={styles.buttonStyle}>
-            <Text style={styles.buttonText}>
-              Sign Up
-            </Text>
-          </TouchableOpacity>
-        </View>
-        </SafeAreaView>
+				<View style={styles.container}>
+					<View style={styles.itemStyle}>
+						<Input
+							style={styles.input}
+							placeholder="Username"
+							placeholderTextColor="#adb4bc"
+							keyboardType={'email-address'}
+							returnKeyType="next"
+							autoCapitalize="none"
+							autoCorrect={false}
+							// onSubmitEditing={(event) => {event.refs.SecondInput._root.focus();}}
+							// onChangeText={(value: any) => onChangeText('username', value)}
+						/>
+					</View>
+					<View style={styles.itemStyle}>
+						<Input
+							style={styles.input}
+							placeholder="Email"
+							placeholderTextColor="#adb4bc"
+							keyboardType={'email-address'}
+							returnKeyType="next"
+							autoCapitalize="none"
+							autoCorrect={false}
+							// onSubmitEditing={(event) => {event.refs.SecondInput._root.focus();}}
+							// onChangeText={(value: any) => onChangeText('username', value)}
+						/>
+					</View>
+					<View style={styles.itemStyle}>
+						<Input
+							style={styles.input}
+							placeholder="Password"
+							placeholderTextColor="#adb4bc"
+							returnKeyType="go"
+							autoCapitalize="none"
+							autoCorrect={false}
+							secureTextEntry={true}
+							// ref="SecondInput"
+							// onChangeText={value => onChangeText('password', value)}
+						/>
+					</View>
+					<TouchableOpacity
+							onPress={() => signIn()}
+							style={styles.buttonStyle}>
+							<Text style={styles.buttonText}>
+							Sign Up
+							</Text>
+					</TouchableOpacity>
+				</View>
+			</SafeAreaView>
 		);
 };
 

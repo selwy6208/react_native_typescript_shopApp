@@ -55,11 +55,14 @@ const SignInScreen: FC = () => {
             onPressIn={() => setHighlighted(true)}
             onPressOut={() => setHighlighted(false)}
           >
-            <Text style={{
-              textAlign: 'center',
-              backgroundColor: isHighlighted ? '#84a8B6' : 'transparent',
-              color: isHighlighted ? 'black' : 'white',
-            }}>
+            <Text 
+              style={{
+                textAlign: 'center',
+                backgroundColor: isHighlighted ? '#84a8B6' : 'transparent',
+                color: isHighlighted ? 'black' : 'white',
+              }}
+              onPress={() => navigation.navigate('SignUp')}
+            >
               Create Account
             </Text>
           </TouchableOpacity>
