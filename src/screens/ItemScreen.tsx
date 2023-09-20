@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import Header from '../components/Header';
 
@@ -32,6 +33,7 @@ interface SizeProps {
 
 const ItemScreen: FC = ({route}: any) => {
   const {label, price, src} = route.params;
+  const navigation: any = useNavigation();
 
   const [activeColor, setActiveColor] = useState('blue');
   const [activeSize, setActiveSize] = useState('M');
@@ -79,13 +81,15 @@ const ItemScreen: FC = ({route}: any) => {
             ))}
           </View>
         </View>
-        <View style={{marginTop: 32, alignItems: 'center'}}>
-          <View style={styles.buyButton}>
-            <Text style={{color: 'white', fontSize: 20, fontWeight: '700'}}>
-              Add to cart
-            </Text>
+        <TouchableOpacity activeOpacity={0.9} onPress={() => navigation.navigate('Payment')}>
+          <View style={{marginTop: 32, alignItems: 'center'}}>
+            <View style={styles.buyButton}>
+              <Text style={{color: 'white', fontSize: 20, fontWeight: '700'}}>
+                Pay
+              </Text>
+            </View>
           </View>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
